@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "trail": {
+      "command": "/opt/homebrew/bin/trail",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
+}

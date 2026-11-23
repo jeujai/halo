@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recent-mail-fetcher"
+version = "0.1.0"
+description = "Standalone CLI that fetches recent emails from a Databricks-hosted Gmail MCP service."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Kiro" }]
+keywords = ["mcp", "gmail", "databricks", "cli"]
+dependencies = [
+    "mcp>=1.0",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dotenv = ["python-dotenv>=1.0"]
+
+[project.scripts]
+recent-mail-fetcher = "recent_mail_fetcher.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["recent_mail_fetcher*"]
